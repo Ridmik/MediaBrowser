@@ -103,9 +103,29 @@ extension ViewController: MediaBrowserDelegate {
         selections[index] = selected
     }
     
-//    func titleForPhotoAtIndex(index: Int, MediaBrowser: MediaBrowser) -> String {
-//    }
+    func accessToken(for url: URL?) -> String? {
+        return nil
+    }
     
+    func actionButtonPressed(at photoIndex: Int, in mediaBrowser: MediaBrowser, sender: Any?) {
+        
+    }
+    
+    func captionView(for mediaBrowser: MediaBrowser, at index: Int) -> MediaCaptionView? {
+        return nil
+    }
+    
+    func gridCellSize() -> CGSize {
+        return CGSize(width: 128, height: 128)
+    }
+    
+    func mediaBrowserDidFinishModalPresentation(mediaBrowser: MediaBrowser) {
+        mediaBrowser.dismiss(animated: true, completion: nil)
+    }
+    
+    func title(for mediaBrowser: MediaBrowser, at index: Int) -> String? {
+        return nil
+    }
 
 }
 //MARK: UITableViewDelegate, UITableviewDataSource
